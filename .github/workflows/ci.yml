@@ -20,8 +20,10 @@ jobs:
           python-version: '3.9'
       - name: Install dependencies
         run: pip install pytest
-      - name: Run flake8
-        run: flake8 .
-      - name: Run tests
+        - name: Run tests
         run: pytest tests/
+  flake8:
+    - name: Run flake8
+        run: flake8 .
+      
 
